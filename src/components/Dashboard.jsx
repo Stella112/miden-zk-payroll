@@ -1,5 +1,6 @@
 import GlassCard from './GlassCard';
 import TransactionCard from './TransactionCard';
+import TreasuryWidget from './TreasuryWidget';
 import { usePayroll } from '../hooks/usePayroll';
 
 const inputBaseStyle = {
@@ -65,6 +66,9 @@ export default function Dashboard() {
                     Zero-knowledge payroll transactions, powered by the Miden VM.
                 </p>
             </div>
+
+            {/* Live Treasury Widget */}
+            <TreasuryWidget />
 
             {/* Form card */}
             <GlassCard

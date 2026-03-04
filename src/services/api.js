@@ -30,3 +30,22 @@ export async function runPayroll({ employeeId, amount }) {
 
     return response.json();
 }
+
+/**
+ * GET /balance
+ * Fetches the current treasury token balance from the backend.
+ *
+ * @returns {Promise<{ balance: number }>}
+ */
+export async function fetchTreasuryBalance() {
+    const response = await fetch(`${BASE_URL}/balance`, {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (!response.ok) {
+        throw new Error(`Failed to fetch balance: ${response.status}`);
+    }
+
+    return response.json();
+}
