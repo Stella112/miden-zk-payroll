@@ -1,4 +1,4 @@
-# ⬡ Miden Phantom Ledger
+# ⬡ Miden ZK Payroll
 
 A zero-knowledge, on-chain payroll execution dashboard built for the **Miden Testnet**. 
 
@@ -22,7 +22,7 @@ The application is split into two specialized layers:
 
 * **Frontend:** React, Vite, Tailwind CSS v4
 * **Backend:** Node.js, Express, Child Process Execution
-* **Web3/ZK:** Polygon Miden (`miden-client`), ZK-STARKs
+* **Web3/ZK:** Miden (`miden-client`), ZK-STARKs
 
 ## 🚀 Future Roadmap
 
