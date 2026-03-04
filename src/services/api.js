@@ -1,4 +1,4 @@
-const BASE_URL = 'http://38.49.209.149:3001';
+const BASE_URL = '/api';
 
 /**
  * POST /run-payroll
