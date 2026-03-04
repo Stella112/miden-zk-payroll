@@ -1,16 +1,34 @@
-# React + Vite
+# ⬡ Miden Phantom Ledger
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A zero-knowledge, on-chain payroll execution dashboard built for the **Miden Testnet**. 
 
-Currently, two official plugins are available:
+This project combines a sleek, high-contrast glassmorphic React frontend with a Node.js API bridge. It generates real-time ZK-STARK proofs on an edge VPS to send secure, encrypted payroll transactions without exposing company treasury data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+* **Zero-Knowledge Execution:** Generates local execution traces and proofs in milliseconds via the Miden VM before submitting transactions to the public network.
+* **Ghost Paychecks:** Supports routing funds through both `private` (fully encrypted) and `public` (wallet-detectable) Miden notes.
+* **Cyber-Ops UI:** Custom orange-and-white glassmorphic design system featuring a dynamic, responsive `<canvas>` matrix background.
+* **Precision Handling:** Built-in underflow protection and automatic decimal routing (6 decimal places) for seamless, human-readable UI inputs.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🏗️ Architecture
 
-## Expanding the ESLint configuration
+The application is split into two specialized layers:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **The Interface (React + Vite + Tailwind v4):** A fast, client-side dashboard that captures target employee IDs and payload amounts.
+2. **The Prover API (Node.js + Express):** A secure backend service sitting on a VPS. It catches requests from the UI, orchestrates the `miden-client` CLI, automatically handles proof-of-work challenges, and executes the payroll.
+
+## 💻 Tech Stack
+
+* **Frontend:** React, Vite, Tailwind CSS v4
+* **Backend:** Node.js, Express, Child Process Execution
+* **Web3/ZK:** Polygon Miden (`miden-client`), ZK-STARKs
+
+## 🚀 Future Roadmap
+
+- [ ] Implement a live Treasury Balance widget to monitor the sender vault.
+- [ ] Add batch-payout capabilities for multi-employee payroll runs.
+- [ ] Parse and display historical output notes in a UI ledger.
+
+---
+*Built with React, Miden, and heavy vibe coding.*
