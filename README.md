@@ -31,4 +31,4 @@ The application is split into two specialized layers:
 - [ ] Parse and display historical output notes in a UI ledger.
 
 ---
-*Built with React, Miden, and heavy vibe coding.*
+*Built with React, and Miden.*
